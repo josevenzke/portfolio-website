@@ -252,7 +252,7 @@ h6 {font-size: 16px;}
   padding-bottom: 10px;
   background-color: var(--secondaryColor);
   border: 1px solid var(--borderColor);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #submit-btn {
