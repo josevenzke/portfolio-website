@@ -6,12 +6,23 @@
     <title>José Venzke</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="default.css">
-    <script src="https://kit.fontawesome.com/072ca0712d.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://unpkg.com/98.css"/>
+    <link rel="stylesheet" href="css/default.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    $("#minimize").click(function () {
+        $(".bottom").hide(200);
+    });
+    $("#maximize").click(function (e) {
+        $(".bottom").show(200);
+        e.stopPropagation();
+    });
+});
+    </script>
 
-      <section class="s1">
+  </head>
+  <body class="s1">
 
         <div class="main-container">
           <!-- Principal -->
@@ -20,22 +31,14 @@
             <!-- Barra de cima -->
             <div class="nav-wrapper">
               <!-- Menu Nav -->
-              <ul id="navigation">
-                <li><a href="projetcs.html">Contact</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-              <!-- Fim Menu Nav -->
-
-              <!-- Botoes Windows -->
-              <div class="dots-wrapper">
-                <div class="browser-dot">
-                  <i class="far fa-window-minimize"></i>
-                </div>
-                <div class="browser-dot">
-                  <i class="far fa-window-maximize"></i>
-                </div>
-                <div class="browser-dot">
-                  <i class="fas fa-window-close"></i>
+              <div class="window" style="width: 100%">
+                <div class="title-bar">
+                  <div class="title-bar-text"><a href="index.html"><button disabled>Sobre</button></a> <a href="project.html"><button>Projetos</button></a> <a href="contato.html"><button>Contato</button></a></div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize" id="minimize"></button>
+                    <button aria-label="Maximize" id="maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
                 </div>
               </div>
               <!-- Fim Botoes Windows  -->
@@ -43,9 +46,9 @@
             <!-- Fim Barra de Cima -->
 
             <!-- Seção Esquerda -->
-            <div class="left-column">
+            <div class="left-column bottom" >
               <img src="images/logo.png" id="profile_pic" alt="My photo">
-              <h5 style="text-align: center;line-height:0;">Personalize Theme</h5>
+              <h5 style="text-align: center;line-height:0;">José Venzke</h5>
 
               <div id="theme-options-wrapper">
                 <div id="light-mode" class="theme-dot"></div>
@@ -56,80 +59,31 @@
             <!-- Fim Seção Esquerda -->
 
             <!-- Seção Direita -->
-            <div class="right-column">
-              <div id="preview">
-                <h3>What i do</h3>
-                <p>Ut enim ad minimExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="right-column bottom">
+              <div class="window">
+                <div class="title-bar">
+                  <div class="title-bar-text" id="titulo">About Me</div>
+                  <div class="title-bar-controls">
+                  </div>
+                </div>
+                <div class="window-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,sse</p>
+                </div>
               </div>
             </div>
             <!-- Fim Seção Direita -->
-          </div>
+            </div>
         <!-- Fim Principal -->
         </div>
-      </section>
-
-      <section class="">
-        <div class="main-container">
-        </div>
-      </section>
-
-      <section class="s2">
-        <div class="main-container">
-          <h3 style="text-align:center;">Projects</h3>
-          <div class="post-wrapper">
-
-            <div class="post">
-              <img class="thumbnail" src="images/logo.png" alt="">
-              <div class="post-preview">
-                <h6 class="post-title">Post Title</h6>
-                <p class="post-intro">This is a sentence and some morte text i love potatos</p>
-                <a href="#">Read More</a>
-              </div>
+        <div class="navbar">
+          <div class="window" style="width:100%;">
+            <div class="window-body">
+              <a href="#home" class="active">Home</a>
+              <a href="#news">News</a>
+              <a href="#contact">Contact</a>
             </div>
-
-            <div class="post">
-              <img class="thumbnail" src="images/logo.png" alt="">
-              <div class="post-preview">
-                <h6 class="post-title">Post Title</h6>
-                <p class="post-intro">This is a sentence and some morte dasdasdsa das das dsa das das dsa</p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-
-            <div class="post">
-              <img class="thumbnail" src="images/logo.png" alt="">
-              <div class="post-preview">
-                <h6 class="post-title">Post Title</h6>
-                <p class="post-intro">This is a sentence and some morte text i love potatos</p>
-                <a href="#">Read More</a>
-              </div>
-            </div>
-
-          </div>
+         </div>
         </div>
-      </section>
 
-      <section class="s1">
-        <div class="main-container">
-          <h3 style="text-align:center;">Contato</h3>
-
-          <form id="contact-form" action="index.html" method="post">
-            <label for="nome">Nome:</label>
-            <input id="input-field" type="text" name="nome">
-
-            <label for="assunto">Assunto:</label>
-            <input id="input-field" type="text" name="assunto">
-
-            <label for="email">Email:</label>
-            <input id="input-field" type="email" name="email">
-
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="input-field" name="mensagem"></textarea>
-
-
-            <input id="submit-btn" type="submit" value="Enviar">
-          </form>
-        </div>
-      </section>
   </body>
 </html>
