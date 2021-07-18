@@ -126,6 +126,28 @@ h6 {font-size: 16px;}
   border: 2px solid var(--borderColor);
 }
 
+.name-title{
+  text-align: center;
+  line-height:0;
+  margin-top:25px;
+  margin-bottom: 15px;
+}
+
+.ico{
+  margin-right: 6px;
+}
+
+
+.sub-icon{
+  font-size: 35px;
+}
+
+.sub-icon-svg{
+  width: 32px;
+  height: 28px;
+  margin-top: 4px;
+}
+
 #theme-options-wrapper{
   display: flex;
   justify-content: center;
