@@ -1,18 +1,4 @@
 <template>
-    
-        <div class="left-column bottom" >
-            <img src="images/logo.jpg" id="profile_pic" alt="My photo">
-            <h5 class="name-title">José Venzke</h5>
-            <p id="settings-note">Fullstack Software Developer</p>
-            <div id="theme-options-wrapper">
-              <div class="ico"><i class="fab sub-icon fa-linkedin"></i></div>
-              <div class="ico"><i class="fab sub-icon fa-github-square"></i></div>
-            </div>
-            
-          </div>
-          <!-- Fim Seção Esquerda -->
-
-          <!-- Seção Direita -->
           <div class="right-column bottom">
             <div class="window">
               <div class="title-bar">
@@ -21,9 +7,28 @@
                 </div>
               </div>
               <div class="window-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,sse</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vero similique luptatum dignissimos adipisci m dignissimos adipisci m dignissimos adipisci?</p>
+                <Skills />
               </div>
             </div>
           </div>
 
 </template>
+
+<script>
+import Skills from './Skills.vue'
+
+export default {
+  name:'About',
+  components:{
+    Skills,
+  }
+}
+</script>
+
+
+<style scoped>
+.window-body>p{
+  text-align: justify;
+}
+</style>
