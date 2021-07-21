@@ -19,8 +19,9 @@
             </div>
             <!-- Fim Botoes Windows  -->
           </div>
+            <Profile />
             <About />
-          </div>
+        </div>
       <!-- Fim Principal -->
       </div>
       <div class="navbar">
@@ -37,9 +38,13 @@
 
 <script>
 import About from './components/About.vue'
+import Profile from './components/Profile.vue'
 
 export default {
-  components: { About },
+  components: { 
+    About,
+    Profile
+  },
   name: 'App',
   metaInfo:{
     title: 'Default Title',
