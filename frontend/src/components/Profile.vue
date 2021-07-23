@@ -10,3 +10,10 @@
             
     </div>
 </template>
+
+<style scoped>
+.left-column{
+    margin-top:20px;
+    margin:auto;
+}
+</style>
