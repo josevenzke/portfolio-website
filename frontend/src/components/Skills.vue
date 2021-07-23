@@ -1,51 +1,31 @@
 <template>
 <div class="de-flex">
-    <div class="left-column">
+    <div>
         <ul class="tree-view">
-            <li>Table of Contents</li>
-            <li>What is web development?</li>
             <li>
-                CSS
+                Conhecimentos:
                 <ul>
-                <li>Selectors</li>
-                <li>Specificity</li>
-                <li>Properties</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>C</li>
+                <li>HTML/CSS</li>
+                <li>Docker</li>
                 </ul>
             </li>
         </ul>
     </div>
-    <div class="right-column">
+    <div>
         <ul class="tree-view">
             <li>
-                <details open>
-                <summary>JavaScript</summary>
+                Outras Habilidades:
                 <ul>
-                    <li>Avoid at all costs</li>
-                    <li>
-                    <details>
-                        <summary>Unless</summary>
-                        <ul>
-                        <li>Avoid</li>
-                        <li>
-                            <details>
-                            <summary>At</summary>
-                            <ul>
-                                <li>Avoid</li>
-                                <li>At</li>
-                                <li>All</li>
-                                <li>Cost</li>
-                            </ul>
-                            </details>
-                        </li>
-                        <li>All</li>
-                        <li>Cost</li>
-                        </ul>
-                    </details>
-                    </li>
+                <li>Django</li>
+                <li>Vue JS</li>
+                <li>Django RestFramework</li>
+                <li>Selenium</li>
+                <li>Linux</li>
                 </ul>
-                </details>
             </li>
-            <li>HTML</li>
         </ul>
     </div>
 </div>
@@ -59,6 +39,16 @@
 
 ul{
     text-align: left;
+    margin-bottom: 10px;
+}
+.tree-view{
+    width: 200px;
+}
+
+@media only screen and (max-width: 800px) {
+  .tree-view{
+      width: 150px;
+  }
 }
 
 </style>
