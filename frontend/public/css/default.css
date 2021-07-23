@@ -67,41 +67,6 @@ h6 {font-size: 16px;}
 }
 
 
-.intro-wrapper{
-  background-color: #e0e0e0;
-  border:1px solid var(--borderColor);
-  margin-bottom: 20px;
-  margin-top: 150px;
-
-  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    'nav-wrapper nav-wrapper'
-    'left-column right-column'
-  ;
-}
-
-.nav-wrapper{
-  grid-area: nav-wrapper;
-  border-bottom: 1px solid var(--borderColor);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--mainColor);
-}
-
-#navigation{
-  margin:0;
-  padding: 10px;
-}
-
-#navigation li {
-  display: inline-block;
-  margin-right: 5px;
-  margin-left: 5px;
-}
 
 .dots-wrapper{
   display: flex;
@@ -109,12 +74,6 @@ h6 {font-size: 16px;}
 
 .browser-dot{
   margin: 5px;
-}
-
-.left-column{
-  grid-area: left-column;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 #profile_pic{
@@ -152,34 +111,10 @@ h6 {font-size: 16px;}
   display: flex;
   justify-content: center;
 }
-
-.theme-dot {
-  height: 25px;
-  width: 40px;
-  margin: 5px;
-  border:2px solid var(--themeDotBorder);
-
-  -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-  box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-
-  cursor: pointer;
+.about-container{
+  display: flex;
+  justify-content: space-around;
 }
-
-.theme-dot:hover{
-  border-width: 3px;
-}
-
-
-#light-mode{
-  background-color: #fff
-}
-
-#blue-mode{
-  background-color: #a3b2cf
-}
-
-
 #settings-note{
   font-size:12px;
   font-style: italic;
