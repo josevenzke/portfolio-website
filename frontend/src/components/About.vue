@@ -7,7 +7,7 @@
                 </div>
               </div>
               <div class="window-body">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vero similique luptatum dignissimos adipisci m dignissimos adipisci m dignissimos adipisci?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam beatae quis non ex aperiam facere optio unde provident aliquid nihil maxime sequi neque, facilis, exercitationem necessitatibus rerum labore, corporis officiis?</p>
                 <Skills />
               </div>
             </div>
@@ -30,5 +30,8 @@ export default {
 <style scoped>
 .window-body>p{
   text-align: justify;
+}
+.right-column{
+  margin: auto;
 }
 </style>
