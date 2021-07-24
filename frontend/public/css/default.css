@@ -111,10 +111,7 @@ h6 {font-size: 16px;}
   display: flex;
   justify-content: center;
 }
-.about-container{
-  display: flex;
-  justify-content: space-around;
-}
+
 #settings-note{
   font-size:12px;
   font-style: italic;
@@ -163,9 +160,5 @@ h6 {font-size: 16px;}
   width: 100%;
 }
 
-@media screen and (max-width: 1200px){
-  .main-container{
-    width: 95%;
-  }
-}
+
 
