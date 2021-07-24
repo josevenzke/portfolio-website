@@ -17,16 +17,13 @@
                 </div>
               </div>
                 <div class="tab">
-                  <button class="active">Teste</button>
-                  <button>Teste</button>
-                  <button>Teste</button>
+                  <button class="active">Sobre</button>
+                  <button>Projeto</button>
+                  <button>Contato</button>
                   <div class="last"></div>
                 </div>
               <div class="window sub-window">
-                <div class="about-container">
-                  <Profile />
-                  <About />
-                </div>
+                <AboutTab />
               </div>
             </div>
             <!-- Fim Botoes Windows  -->
@@ -48,18 +45,13 @@
 </template>
 
 <script>
-import About from './components/About.vue'
-import Profile from './components/Profile.vue'
+import AboutTab from './components/AboutTab.vue'
 
 export default {
   components: { 
-    About,
-    Profile
+    AboutTab,
   },
   name: 'App',
-  metaInfo:{
-    title: 'Default Title',
-  },
 }
 </script>
 
@@ -74,21 +66,55 @@ export default {
 }
 
 .main-container{
-    margin-top: 200px;
+    margin: 200px auto 0px auto;
+    max-width: 1200px;
+    
 }
-@media only screen and (max-width: 900px) {
+
+@media only screen and (max-width: 1250px) {
   .main-container{
-    margin-top: 50px;
+    margin: 200px  auto 0px auto;
+    width: 1000px;
   }
-  .about-container {
-    flex-direction: column;
-    width: 100%;
+}
+
+
+@media only screen and (max-width: 1050px) {
+  .main-container{
+    margin: 50px  auto 0px auto;
+    width: 800px;
 
   }
 }
+
+@media only screen and (max-width: 880px) {
+  .main-container{
+    margin: 50px  auto 0px auto;
+    width: 600px;
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main-container{
+    margin: 50px  auto 0px auto;
+    width: 500px;
+
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .main-container{
+    margin: 50px  auto 0px auto;
+    width: 450px;
+
+  }
+}
+
+
 
 .sub-window{
-  margin: 0px 5px 5px 5px;
+  margin: 0px 15px 15px 15px;
   padding: 0px;
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 0px #fff, 
   inset -2px -2px grey, 
@@ -97,7 +123,7 @@ export default {
 
 .tab{
   display:flex;
-  margin: 10px 5px 0px 5px;
+  margin: 10px 15px 0px 15px;
 }
 
 
