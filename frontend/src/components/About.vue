@@ -1,5 +1,5 @@
 <template>
-          <div class="right-column bottom">
+
             <div class="window">
               <div class="title-bar">
                 <div class="title-bar-text" id="titulo">About Me</div>
@@ -11,7 +11,6 @@
                 <Skills />
               </div>
             </div>
-          </div>
 
 </template>
 
@@ -31,7 +30,5 @@ export default {
 .window-body>p{
   text-align: justify;
 }
-.right-column{
-  margin: auto;
-}
+
 </style>
