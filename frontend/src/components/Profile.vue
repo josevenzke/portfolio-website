@@ -1,5 +1,5 @@
 <template>
-    <div class="left-column bottom" >
+    <div>
         <img src="images/logo.jpg" id="profile_pic" alt="My photo">
         <h5 class="name-title">José Venzke</h5>
         <p id="settings-note">Fullstack Software Developer</p>
@@ -7,13 +7,9 @@
             <div class="ico"><i class="fab sub-icon fa-linkedin"></i></div>
             <div class="ico"><i class="fab sub-icon fa-github-square"></i></div>
         </div>
-            
-    </div>
+    </div>        
 </template>
 
 <style scoped>
-.left-column{
-    margin-top:20px;
-    margin:auto;
-}
+
 </style>
