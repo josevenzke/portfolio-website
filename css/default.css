@@ -60,11 +60,6 @@ h6 {font-size: 16px;}
   overflow: auto;
 }
 
-.main-container{
-  width: 1200px;
-  margin:0 auto;
-  height: 100%;
-}
 
 
 .intro-wrapper{
@@ -186,13 +181,6 @@ h6 {font-size: 16px;}
   text-align: center;
 }
 
-.right-column{
-  padding-top: 50px;
-  grid-area: right-column;
-  padding-bottom: 50px;
-  display: grid;
-  justify-content: center;
-}
 
 .window{
   width: 500px;
@@ -231,26 +219,5 @@ h6 {font-size: 16px;}
   width: 100%;
 }
 
-@media screen and (max-width: 1200px){
-  .main-container{
-    width: 95%;
-  }
-}
 
-@media screen and (max-width: 800px){
-  .intro-wrapper{
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    'nav-wrapper'
-    'left-column'
-    'right-column';
-  }
 
-  .right-column{
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .window{
-    width: 400px;
-  }
-}
