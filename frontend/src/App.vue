@@ -9,16 +9,24 @@
             <!-- Menu Nav -->
             <div class="window" style="width: 100%">
               <div class="title-bar">
-                <div class="title-bar-text"><a href="index.html"><button disabled>Sobre</button></a> <a href="project.html"><button>Projetos</button></a> <a href="contato.html"><button>Contato</button></a></div>
+                <div class="title-bar-text"> Portfolio.exe</div>
                 <div class="title-bar-controls">
                   <button aria-label="Minimize" id="minimize"></button>
                   <button aria-label="Maximize" id="maximize"></button>
                   <button aria-label="Close"></button>
                 </div>
               </div>
-              <div class="about-container">
-                <Profile />
-                <About />
+                <div class="tab">
+                  <button class="active">Teste</button>
+                  <button>Teste</button>
+                  <button>Teste</button>
+                  <div class="last"></div>
+                </div>
+              <div class="window sub-window">
+                <div class="about-container">
+                  <Profile />
+                  <About />
+                </div>
               </div>
             </div>
             <!-- Fim Botoes Windows  -->
@@ -30,7 +38,7 @@
       <div class="navbar">
         <div class="window" style="width:100%;">
           <div class="window-body">
-            <a href="#home" class="active">Home</a>
+            <a href="#home">Home</a>
             <a href="#news">News</a>
             <a href="#contact">Contact</a>
           </div>
@@ -73,8 +81,41 @@ export default {
     margin-top: 50px;
   }
   .about-container {
-    display: block;
-    margin-top: 20px;
+    flex-direction: column;
+    width: 100%;
+
   }
+}
+
+.sub-window{
+  margin: 0px 5px 5px 5px;
+  padding: 0px;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 0px #fff, 
+  inset -2px -2px grey, 
+  inset 2px 0px #dfdfdf;
+}
+
+.tab{
+  display:flex;
+  margin: 10px 5px 0px 5px;
+}
+
+
+.tab>button{
+  box-shadow: inset -1px 0px #0a0a0a, inset 1px 0px #fff, 
+  inset -2px 0px grey, 
+  inset 2px 2px #dfdfdf,inset -2px -2px #dfdfdf,  inset -1px -1px #fff;
+  border-radius: 4px 4px 0px 0px;
+}
+.last{
+  width: 100%;
+  box-shadow: inset 0px -2px #dfdfdf,  inset 0px -1px #fff;
+  
+  border-radius: 4px 4px 0px 0px;
+}
+.active{
+  box-shadow: inset -1px 0px #0a0a0a, inset 1px 0px #fff, 
+  inset -2px 0px grey, 
+  inset 2px 2px #dfdfdf !important;
 }
 </style>
