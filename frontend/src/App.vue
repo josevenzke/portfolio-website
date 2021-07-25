@@ -80,6 +80,11 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "MSGothic";
+  src: local("MSGothic"),
+   url(./fonts/MSGothic.ttf) format("truetype");
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -87,6 +92,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.title-bar, .window, button, input, label, option, select, textarea, ul.tree-view{
+  font-family: "MSGothic" !important;
 }
 
 .main-container{
@@ -156,6 +165,7 @@ export default {
   inset -2px 0px grey, 
   inset 2px 2px #dfdfdf,inset -2px -2px #dfdfdf,  inset -1px -1px #fff;
   border-radius: 4px 4px 0px 0px;
+  font-size: 12.5px;
 }
 .tab>button:focus{
   border: 0px;
