@@ -27,7 +27,7 @@
                   <AboutTab />
                 </div>
                 <div v-show="isActive('projetos')">
-                  TESTE
+                  <Projetos />
                 </div>
               </div>
             </div>
@@ -51,11 +51,13 @@
 
 <script>
 import AboutTab from './components/AboutTab.vue'
+import Projetos from './components/Projetos.vue'
 
 export default {
   name: 'App',
   components: { 
     AboutTab,
+    Projetos
   },
   data(){
     return{
