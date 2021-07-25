@@ -43,6 +43,7 @@ ul{
 }
 .tree-view{
     width: 200px;
+    font-size: 14px;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -11,5 +11,10 @@
 </template>
 
 <style scoped>
-
+.name-title{
+    font-family: "Pixelated MS Sans Serif",Arial;
+}
+#settings-note{
+    font-size: 14px;
+}
 </style>
