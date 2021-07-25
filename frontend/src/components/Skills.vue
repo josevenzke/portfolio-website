@@ -45,9 +45,16 @@ ul{
     width: 200px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .tree-view{
       width: 150px;
+  }
+  .de-flex{
+      display: block;
+  }
+  .de-flex>div>ul{
+    margin:auto;
+    margin-bottom: 10px;
   }
 }
 
