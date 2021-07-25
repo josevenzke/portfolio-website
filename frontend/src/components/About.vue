@@ -2,12 +2,12 @@
 
             <div class="window">
               <div class="title-bar">
-                <div class="title-bar-text" id="titulo">About Me</div>
+                <div class="title-bar-text" id="titulo">About Me.txt</div>
                 <div class="title-bar-controls">
                 </div>
               </div>
               <div class="window-body">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam beatae quis non ex aperiam facere optio unde provident aliquid nihil maxime sequi neque, facilis, exercitationem necessitatibus rerum labore, corporis officiis?</p>
+                <p>Programador, cristão e pai de família, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti  </p>
                 <Skills />
               </div>
             </div>
@@ -29,6 +29,8 @@ export default {
 <style scoped>
 .window-body>p{
   text-align: justify;
+  letter-spacing: -0.5px;
+  font-size: 16px;
 }
 
 </style>
