@@ -30,6 +30,7 @@ export default {
 }
 .right-column{
   margin:50px 20px 40px 20px;
+  width: 600px;
 }
 
 .left-column{
@@ -37,8 +38,11 @@ export default {
 }
 
 
-@media only screen and (max-width: 1250px) {
 
+@media only screen and (max-width: 1000px) {
+    .right-column{
+      width: 300px;
+    }
 }
 
 @media only screen and (max-width: 880px) {
@@ -46,7 +50,9 @@ export default {
   .about-container {
     flex-direction: column;
     width: 100%;
-
+  }
+  .right-column{
+    margin:auto;
   }
 }
 
