@@ -13,34 +13,16 @@
 }
 
 
-html, body {
-  padding: 0;
-  margin: 0;
+
+
+
+
+body{
+  margin: 0px;
+  padding: 0px;
 }
 
-strong {
-  color: var(--mainText);
-  font-family: 'Russo One', sans-serif;
-  font-weight: 500;
 
-}
-
-li,p, span, label, input, textarea {
-  color: var(--secondaryText);
-  font-family: 'Roboto Mono', monospace;
-}
-
-a > button{
-  color: blue;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
 
 h1 {font-size: 56px;}
 h2 {font-size: 36px;}
@@ -51,29 +33,8 @@ h6 {font-size: 16px;}
 
 
 .s1 {
-  background-color: var(--mainColor);
-  overflow: auto;
-}
-.s2 {
-  background-color:  var(--secondaryColor);
-  border-bottom:1px solid var(--borderColor);
-  overflow: auto;
-}
+  background-color: #008081;
 
-.main-container{
-  width: 1200px;
-  margin:0 auto;
-  height: 100%;
-}
-
-
-
-.dots-wrapper{
-  display: flex;
-}
-
-.browser-dot{
-  margin: 5px;
 }
 
 #profile_pic{
@@ -96,7 +57,6 @@ h6 {font-size: 16px;}
   margin-right: 6px;
 }
 
-
 .sub-icon{
   font-size: 35px;
 }
@@ -112,31 +72,6 @@ h6 {font-size: 16px;}
   justify-content: center;
 }
 
-#settings-note{
-  font-size:12px;
-  font-style: italic;
-  text-align: center;
-}
-
-.right-column{
-  padding-top: 50px;
-  grid-area: right-column;
-  padding-bottom: 50px;
-  display: grid;
-  justify-content: center;
-}
-
-
-#preview{
-  width: 300px;
-  height: 300px;
-  border:1.5px solid #17a2b8;
-  padding: 15px;
-}
-
-#preview > h3{
-  text-align: center;
-}
 
 .window-body > p{
   font-size: 16px;
@@ -144,12 +79,9 @@ h6 {font-size: 16px;}
 
 .title-bar-text {
   font-size: 14px;
+  margin-left: 5px;
 }
 
-#titulo{
-  display: flex;
-  justify-content: center;
-}
 
 .navbar {
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
