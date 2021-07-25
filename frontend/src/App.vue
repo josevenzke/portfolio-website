@@ -17,13 +17,18 @@
                 </div>
               </div>
                 <div class="tab">
-                  <button class="active">Sobre</button>
-                  <button>Projeto</button>
-                  <button>Contato</button>
+                  <button @click="setActive('sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
+                  <button @click="setActive('projetos')" :class="{ active: isActive('projetos')}">Projeto</button>
+                  <button @click="setActive('contato')" :class="{ active: isActive('contato')}">Contato</button>
                   <div class="last"></div>
                 </div>
               <div class="window sub-window">
-                <AboutTab />
+                <div v-show="isActive('sobre')">
+                  <AboutTab />
+                </div>
+                <div v-show="isActive('projetos')">
+                  TESTE
+                </div>
               </div>
             </div>
             <!-- Fim Botoes Windows  -->
@@ -48,10 +53,27 @@
 import AboutTab from './components/AboutTab.vue'
 
 export default {
+  name: 'App',
   components: { 
     AboutTab,
   },
-  name: 'App',
+  data(){
+    return{
+      activeTab: 'sobre',
+    }
+  },
+  methods:{
+    isActive(tab){
+      if (tab == this.activeTab){
+        return true
+      }
+      return false
+    },
+    setActive(tab){
+      this.activeTab = tab
+    }
+  }
+
 }
 </script>
 
@@ -132,6 +154,10 @@ export default {
   inset -2px 0px grey, 
   inset 2px 2px #dfdfdf,inset -2px -2px #dfdfdf,  inset -1px -1px #fff;
   border-radius: 4px 4px 0px 0px;
+}
+.tab>button:focus{
+  border: 0px;
+  outline:none;
 }
 .last{
   width: 100%;
