@@ -148,7 +148,6 @@ export default {
 
 .sub-window{
   margin: 0px 15px 15px 15px;
-  padding: 0px;
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 0px #fff, 
   inset -2px -2px grey, 
   inset 2px 0px #dfdfdf;
