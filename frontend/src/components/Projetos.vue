@@ -1,30 +1,75 @@
 <template>
-    <div>
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
+
+<div class="projetos-tab">
+    <div class="window teste">
+        <div class="title-bar">
+            <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
+                <div class="title-bar-controls">
+                </div>
             </div>
-            <div class="window-body">
-                <img src="images/logo.jpg" id="project-pic" alt="My photo">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam beatae quis non ex aperiam facere optio unde provident aliquid nihil maxime sequi neque, facilis, exercitationem necessitatibus rerum labore, corporis officiis?</p>
-                <div class="de-flex"><button>Github</button> <button>Demo</button></div>
+        <div class="window-body">
+            <img src="../assets/logo.png" class="projeto-imagem">
+            <p>Programador, cristao e pai de familia, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti </p>
+            <div class="projeto-botoes">
+                <button>Demo</button>
+                <button id="github">Github</button>
             </div>
         </div>
     </div>
+
+    <div class="window teste">
+        <div class="title-bar">
+            <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
+                <div class="title-bar-controls">
+                </div>
+            </div>
+        <div class="window-body">
+            <img src="../assets/logo.png" class="projeto-imagem">
+            <p>Programador, cristao e pai de familia, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti </p>
+            <div class="projeto-botoes">
+                <button>Demo</button>
+                <button id="github">Github</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="window teste">
+        <div class="title-bar">
+            <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
+                <div class="title-bar-controls">
+                </div>
+            </div>
+        <div class="window-body">
+            <img src="../assets/logo.png" class="projeto-imagem">
+            <p>Programador, cristao e pai de familia, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti </p>
+            <div class="projeto-botoes">
+                <button>Demo</button>
+                <button id="github">Github</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 </template>
 
 <style scoped>
 
+.projetos-tab{
+    height: 377px;
+    display: flex;
+}
 
-.window{
-    width: 400px;
-    margin-top:30px;
+.projeto-imagem{
+    margin-top: 10px;
+    width: 180px;
+    height: 120px;
 }
-#project-pic{
-    margin-top: 15px;
-    width: 350px;
-    height: 200px;
+.projeto-botoes{
+    display: flex;
+    flex-direction: row-reverse;
 }
+
 div>p{
     text-align: justify;
     margin: 15px;
@@ -32,6 +77,15 @@ div>p{
 
 .de-flex{
     display:flex;
+}
+
+.teste{
+    margin: 20px;
+    width: 350px;
+}
+
+#github{
+    margin-right: 10px;
 }
 
 </style>
