@@ -1,16 +1,16 @@
 <template>
 
-            <div class="window">
-              <div class="title-bar">
-                <div class="title-bar-text" id="titulo">About Me.txt</div>
-                <div class="title-bar-controls">
-                </div>
-              </div>
-              <div class="window-body">
-                <p>Programador, cristão e pai de família, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti  </p>
-                <Skills />
-              </div>
-            </div>
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text" id="titulo">About Me.txt</div>
+      <div class="title-bar-controls">
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Programador, cristao e pai de familia, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti  </p>
+      <Skills />
+    </div>
+  </div>
 
 </template>
 
