@@ -53,7 +53,6 @@
 import AboutTab from './components/AboutTab.vue'
 import Projetos from './components/Projetos.vue'
 
-
 export default {
   name: 'App',
   components: { 
@@ -62,7 +61,7 @@ export default {
   },
   data(){
     return{
-      activeTab:'sobre',
+      activeTab:'sobre'
     }
   },
 
@@ -78,8 +77,9 @@ export default {
     },
     updateRoute (route) {
       this.$router.push({ path: route })
-      console.log(this.$route.name)
-  }
+      console.log(this.$route)
+      
+    }
   }
 
 }
