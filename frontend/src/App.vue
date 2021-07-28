@@ -17,9 +17,9 @@
                 </div>
               </div>
                 <div class="tab">
-                  <button @click="setActive('sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
-                  <button @click="setActive('projetos')" :class="{ active: isActive('projetos')}">Projeto</button>
-                  <button @click="setActive('contato')" :class="{ active: isActive('contato')}">Contato</button>
+                  <button @click="setActive('sobre'),updateRoute('/sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
+                  <button @click="setActive('projetos'),updateRoute('/projetos')" :class="{ active: isActive('projetos')}">Projeto</button>
+                  <button @click="setActive('contato'),updateRoute('/contato')" :class="{ active: isActive('contato')}">Contato</button>
                   <div class="last"></div>
                 </div>
               <div class="window sub-window">
@@ -53,6 +53,7 @@
 import AboutTab from './components/AboutTab.vue'
 import Projetos from './components/Projetos.vue'
 
+
 export default {
   name: 'App',
   components: { 
@@ -61,9 +62,10 @@ export default {
   },
   data(){
     return{
-      activeTab: 'sobre',
+      activeTab: this.$route.name,
     }
   },
+
   methods:{
     isActive(tab){
       if (tab == this.activeTab){
@@ -73,7 +75,11 @@ export default {
     },
     setActive(tab){
       this.activeTab = tab
-    }
+    },
+    updateRoute (route) {
+      this.$router.push({ path: route })
+      console.log(this.$route.name)
+  }
   }
 
 }
