@@ -18,7 +18,7 @@
               </div>
                 <div class="tab">
                   <button @click="setActive('sobre'),updateRoute('/sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
-                  <button @click="setActive('projetos'),updateRoute('/projetos')" :class="{ active: isActive('projetos')}">Projeto</button>
+                  <button @click="setActive('projetos'),updateRoute('/projetos')" :class="{ active: isActive('projetos')}">Projetos</button>
                   <button @click="setActive('contato'),updateRoute('/contato')" :class="{ active: isActive('contato')}">Contato</button>
                   <div class="last"></div>
                 </div>
@@ -62,7 +62,7 @@ export default {
   },
   data(){
     return{
-      activeTab: this.$route.name,
+      activeTab:'sobre',
     }
   },
 
