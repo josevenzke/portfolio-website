@@ -56,10 +56,17 @@
 <style scoped>
 
 .projetos-tab{
-    height: 377px;
     display: flex;
 }
-
+@media only screen and (max-width: 880px) {
+  .projetos-tab{
+    flex-direction: column;
+  }
+  .teste{
+      margin:auto !important;
+      margin-top: 20px !important;
+  }
+}
 .projeto-imagem{
     margin-top: 10px;
     width: 180px;
