@@ -1,7 +1,23 @@
 <template>
 
 <div class="projetos-tab">
-    <div class="window teste">
+    <div class="window teste sortvisu">
+        <div class="title-bar">
+            <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
+                <div class="title-bar-controls">
+                </div>
+            </div>
+        <div class="window-body">
+            <img src="../assets/sortvisualizer.gif" class="projeto-imagem">
+            <p>Projeto feito para a visualização de algoritmos de ordenação, implementa bubblesort, mergesort e quicksort, usando conceitos de design patterns e a biblioteca Tkinter </p>
+            <div class="projeto-botoes">
+                <a href="https://github.com/josevenzke/sort-visualizer"><button id="github">Github</button></a>
+                <button>Demo</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="window teste chess">
         <div class="title-bar">
             <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
                 <div class="title-bar-controls">
@@ -17,23 +33,7 @@
         </div>
     </div>
 
-    <div class="window teste">
-        <div class="title-bar">
-            <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
-                <div class="title-bar-controls">
-                </div>
-            </div>
-        <div class="window-body">
-            <img src="../assets/logo.png" class="projeto-imagem">
-            <p>Programador, cristao e pai de familia, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti </p>
-            <div class="projeto-botoes">
-                <button>Demo</button>
-                <button id="github">Github</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="window teste">
+    <div class="window teste something">
         <div class="title-bar">
             <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
                 <div class="title-bar-controls">
@@ -58,7 +58,8 @@
 .projetos-tab{
     display: flex;
 }
-@media only screen and (max-width: 880px) {
+
+@media only screen and (max-width: 1050px) {
   .projetos-tab{
     flex-direction: column;
   }
@@ -67,10 +68,12 @@
       margin-top: 20px !important;
   }
 }
+
 .projeto-imagem{
     margin-top: 10px;
-    width: 180px;
+    width: 250px;
     height: 120px;
+    border: 2px solid grey;
 }
 .projeto-botoes{
     display: flex;
