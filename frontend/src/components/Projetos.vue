@@ -35,16 +35,16 @@
 
     <div class="window teste something">
         <div class="title-bar">
-            <div class="title-bar-text" id="titulo">Sorting Visualizer.exe</div>
+            <div class="title-bar-text" id="titulo">Blog.exe</div>
                 <div class="title-bar-controls">
                 </div>
             </div>
         <div class="window-body">
-            <img src="../assets/logo.png" class="projeto-imagem">
-            <p>Programador, cristao e pai de familia, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti </p>
+            <img src="../assets/Blog.gif" class="projeto-imagem">
+            <p>Blog feito inteiramente com Django, com capacidade de login/registo, criação,edição e exclusão de Posts, comentários e pesquisas com filtros, totalmente responsivo</p>
             <div class="projeto-botoes">
-                <a href="https://github.com/josevenzke/sort-visualizer"><button id="github">Github</button></a>
-                <button>Demo</button>
+                <a href="https://github.com/josevenzke/blog-project"><button id="github">Github</button></a>
+                <a href=""><button>Demo</button></a>
             </div>
         </div>
     </div>
@@ -78,6 +78,10 @@
 .projeto-botoes{
     display: flex;
     flex-direction: row-reverse;
+}
+
+.projeto-botoes>a{
+    margin-left: 5px !important;
 }
 
 div>p{
