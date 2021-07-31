@@ -57,17 +57,9 @@
 
 .projetos-tab{
     display: flex;
+    margin-top: 20px;
 }
 
-@media only screen and (max-width: 1050px) {
-  .projetos-tab{
-    flex-direction: column;
-  }
-  .teste{
-      margin:auto !important;
-      margin-top: 20px !important;
-  }
-}
 
 .projeto-imagem{
     margin-top: 10px;
@@ -100,6 +92,25 @@ div>p{
 
 #github{
     margin-right: 10px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .projetos-tab{
+    flex-direction: column;
+  }
+  .teste{
+      margin:auto !important;
+      margin-top: 15px !important;
+      margin-bottom: 15px !important;
+      width: 70% !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .teste{
+
+      width: 85% !important;
+  }
 }
 
 </style>
