@@ -43,6 +43,10 @@ export default {
     .right-column{
       width: 300px;
     }
+    .left-column{
+      margin-top:auto;
+      margin-bottom: auto;
+    }
 }
 
 @media only screen and (max-width: 880px) {
@@ -51,8 +55,14 @@ export default {
     flex-direction: column;
     width: 100%;
   }
+  .left-column{
+    margin-top:30px;
+    margin-bottom: 30px;
+  }
   .right-column{
-    margin:auto;
+    width: 360px;
+    margin: auto;
+    margin-bottom: 20px;
   }
 }
 
