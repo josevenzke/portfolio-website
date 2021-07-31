@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="window-body">
-      <p>Programador, cristao e pai de familia, melhor speedrunner de minecraft da região, bi-campeão de pebolim nas olimpiadas escolares da Escola de Ensino Médio Tuiuti  </p>
+      <p>Sou um desenvolvedor de software de 22 anos, atualmente cursando o ultimo semestre do curso de Ciência da Computação, apaixonado por novas tecnologias, auto-didata e com sede de conhecimento. </p>
       <Skills />
     </div>
   </div>
