@@ -29,6 +29,9 @@
                 <div v-show="isActive('projetos')">
                   <Projetos />
                 </div>
+                <div v-show="isActive('contato')">
+                  <Contato />
+                </div>
               </div>
             </div>
             <!-- Fim Botoes Windows  -->
@@ -37,27 +40,21 @@
         </div>
       <!-- Fim Principal -->
       </div>
-      <div class="navbar">
-        <div class="window" style="width:100%;">
-          <div class="window-body">
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
+
 </div>
 </template>
 
 <script>
 import AboutTab from './components/AboutTab.vue'
 import Projetos from './components/Projetos.vue'
+import Contato from './components/Contato.vue'
 
 export default {
   name: 'App',
   components: { 
     AboutTab,
-    Projetos
+    Projetos,
+    Contato
   },
   data(){
     return{
@@ -112,7 +109,7 @@ export default {
 
 @media only screen and (max-width: 1250px) {
   .main-container{
-    margin: 200px  auto 0px auto;
+    margin-top: 200px;
     width: 1000px;
   }
 }
@@ -120,7 +117,7 @@ export default {
 
 @media only screen and (max-width: 1050px) {
   .main-container{
-    margin: 50px  auto 0px auto;
+    margin-top: 50px;
     width: 800px;
 
   }
@@ -128,7 +125,8 @@ export default {
 
 @media only screen and (max-width: 880px) {
   .main-container{
-    margin: 50px  auto 0px auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
     width: 600px;
 
   }
@@ -136,7 +134,7 @@ export default {
 
 @media only screen and (max-width: 700px) {
   .main-container{
-    margin: 50px  auto 0px auto;
+    margin-top: 50px;
     width: 500px;
 
   }
@@ -144,7 +142,7 @@ export default {
 
 @media only screen and (max-width: 580px) {
   .main-container{
-    margin: 50px  auto 0px auto;
+    margin-top: 50px  auto 0px auto;
     width: 450px;
 
   }
