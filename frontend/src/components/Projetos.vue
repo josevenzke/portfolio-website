@@ -88,6 +88,7 @@ div>p{
 .teste{
     margin: 20px;
     width: 350px;
+    font-size: 16px !important;
 }
 
 #github{
