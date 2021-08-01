@@ -11,9 +11,37 @@
 </template>
 
 <style scoped>
-.name-title{
-    font-family: "Pixelated MS Sans Serif",Arial;
+
+#profile_pic{
+  display: block;
+  margin: 0 auto;
+  height:200px;
+  width: 200px;
+  object-fit: cover;
+  border: 2px solid var(--borderColor);
 }
+
+.name-title{
+  font-family: "Pixelated MS Sans Serif",Arial;
+  text-align: center;
+  line-height:0;
+  margin-top:25px;
+  margin-bottom: 15px;
+}
+
+.ico{
+  margin-right: 6px;
+}
+
+.sub-icon{
+  font-size: 35px;
+}
+
+#theme-options-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
 #settings-note{
     font-size: 14px;
 }
