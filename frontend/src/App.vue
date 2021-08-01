@@ -1,8 +1,11 @@
 <template>
 <div>
+  <div class="icone" @dblclick="openWindow()">
+    <img src="../public/images/portfolio.png" id="desktop-icon-image">
+    <p id="desktop-icon-text">Portfolio</p>
+  </div>
   <div class="main-container">
         <!-- Principal -->
-
         <div class="intro-wrapper">
           <!-- Barra de cima -->
           <transition name="fade">
@@ -14,7 +17,7 @@
                   <div class="title-bar-controls">
                     <button @click="minimizeWindow()" aria-label="Minimize" id="minimize"></button>
                     <button aria-label="Maximize" id="maximize"></button>
-                    <button aria-label="Close"></button>
+                    <button @click="closeWindow()" aria-label="Close"></button>
                   </div>
                 </div>
                   <div class="tab">
@@ -42,7 +45,7 @@
       <!-- Fim Principal -->
       </div>
       <div class="navbar">
-        <Navbar />
+        <Navbar :showButton="showButton" :key="showButton" @clicked="maximizeWindow()" />
       </div>
 </div>
 </template>
@@ -65,6 +68,7 @@ export default {
     return{
       activeTab:'sobre',
       showPortfolio: true,
+      showButton: false,
     }
   },
 
@@ -75,8 +79,20 @@ export default {
       }
       return false
     },
+    openWindow(){
+      this.showPortfolio = true
+      this.showButton = false
+    },
+    closeWindow(){
+      this.showPortfolio = false
+    },
     minimizeWindow(){
       this.showPortfolio = false
+      this.showButton = true
+    },
+    maximizeWindow(){
+      this.showPortfolio = true
+      this.showButton = false
     },
     setActive(tab){
       this.activeTab = tab
@@ -127,10 +143,13 @@ h6 {font-size: 16px;}
 
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
@@ -138,6 +157,23 @@ h6 {font-size: 16px;}
     margin: 200px auto 0px auto;
     max-width: 1200px;
     
+}
+.icone{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#desktop-icon-image{
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+#desktop-icon-text{
+  padding-top: 45px !important;
+  color: white;
+  font-family: "MS Sans Serif",Arial !important;
+  font-size: 13px !important;
 }
 
 .title-bar-text {
@@ -161,6 +197,9 @@ h6 {font-size: 16px;}
     width: 800px;
   }
   .navbar{
+    display: none;
+  }
+  .icone{
     display: none;
   }
 }
