@@ -2,7 +2,7 @@
     <div class="navbar">
         <div class="botoes">
             <button class="button-iniciar">Ico</button>
-            <button v-if="show">Portfolio</button>
+            <button v-if="show" @click="openPortfolio()">Portfolio</button>
         </div>
     </div>
 
@@ -15,6 +15,11 @@ export default {
     data(){
         return{
             show: this.showButton
+        }
+    },
+    methods:{
+        openPortfolio(){
+            this.$emit('clicked')
         }
     }
 
