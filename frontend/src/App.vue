@@ -5,42 +5,45 @@
 
         <div class="intro-wrapper">
           <!-- Barra de cima -->
-          <div class="nav-wrapper">
-            <!-- Menu Nav -->
-            <div class="window" style="width: 100%">
-              <div class="title-bar">
-                <div class="title-bar-text"> Portfolio.exe</div>
-                <div class="title-bar-controls">
-                  <button aria-label="Minimize" id="minimize"></button>
-                  <button aria-label="Maximize" id="maximize"></button>
-                  <button aria-label="Close"></button>
+          <transition name="fade">
+            <div v-if="showPortfolio" class="nav-wrapper">
+              <!-- Menu Nav -->
+              <div class="window" style="width: 100%">
+                <div class="title-bar">
+                  <div class="title-bar-text"> Portfolio.exe</div>
+                  <div class="title-bar-controls">
+                    <button @click="minimizeWindow()" aria-label="Minimize" id="minimize"></button>
+                    <button aria-label="Maximize" id="maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+                  <div class="tab">
+                    <button @click="setActive('sobre'),updateRoute('/sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
+                    <button @click="setActive('projetos'),updateRoute('/projetos')" :class="{ active: isActive('projetos')}">Projetos</button>
+                    <button @click="setActive('contato'),updateRoute('/contato')" :class="{ active: isActive('contato')}">Contato</button>
+                    <div class="last"></div>
+                  </div>
+                <div class="window sub-window">
+                  <div v-show="isActive('sobre')">
+                    <AboutTab />
+                  </div>
+                  <div v-show="isActive('projetos')">
+                    <Projetos />
+                  </div>
+                  <div v-show="isActive('contato')">
+                    <Contato />
+                  </div>
                 </div>
               </div>
-                <div class="tab">
-                  <button @click="setActive('sobre'),updateRoute('/sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
-                  <button @click="setActive('projetos'),updateRoute('/projetos')" :class="{ active: isActive('projetos')}">Projetos</button>
-                  <button @click="setActive('contato'),updateRoute('/contato')" :class="{ active: isActive('contato')}">Contato</button>
-                  <div class="last"></div>
-                </div>
-              <div class="window sub-window">
-                <div v-show="isActive('sobre')">
-                  <AboutTab />
-                </div>
-                <div v-show="isActive('projetos')">
-                  <Projetos />
-                </div>
-                <div v-show="isActive('contato')">
-                  <Contato />
-                </div>
-              </div>
+              <!-- Fim Botoes Windows  -->
             </div>
-            <!-- Fim Botoes Windows  -->
-          </div>
-
+          </transition>
         </div>
       <!-- Fim Principal -->
       </div>
-
+      <div class="navbar">
+        <Navbar />
+      </div>
 </div>
 </template>
 
@@ -48,17 +51,20 @@
 import AboutTab from './components/AboutTab.vue'
 import Projetos from './components/Projetos.vue'
 import Contato from './components/Contato.vue'
+import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'App',
   components: { 
     AboutTab,
     Projetos,
-    Contato
+    Contato,
+    Navbar
   },
   data(){
     return{
-      activeTab:'sobre'
+      activeTab:'sobre',
+      showPortfolio: true,
     }
   },
 
@@ -68,6 +74,9 @@ export default {
         return true
       }
       return false
+    },
+    minimizeWindow(){
+      this.showPortfolio = false
     },
     setActive(tab){
       this.activeTab = tab
@@ -101,11 +110,41 @@ export default {
   font-family: "MSGothic" !important;
 }
 
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {font-size: 56px;}
+h2 {font-size: 36px;}
+h3 {font-size: 28px;}
+h4 {font-size: 24px;}
+h5 {font-size: 20px;}
+h6 {font-size: 16px;}
+
+.s1 {
+  background-color: #008081;
+
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+  opacity: 0;
+}
+
 .main-container{
     margin: 200px auto 0px auto;
     max-width: 1200px;
     
 }
+
+.title-bar-text {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
 
 @media only screen and (max-width: 1250px) {
   .main-container{
@@ -118,15 +157,17 @@ export default {
 @media only screen and (max-width: 1050px) {
   .main-container{
     margin-top: 50px;
+    margin-bottom: 30px;
     width: 800px;
-
+  }
+  .navbar{
+    display: none;
   }
 }
 
 @media only screen and (max-width: 880px) {
   .main-container{
     margin-top: 50px;
-    margin-bottom: 30px;
     width: 600px;
 
   }
