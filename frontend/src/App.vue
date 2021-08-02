@@ -17,7 +17,7 @@
                   <div class="title-bar-controls">
                     <button @click="minimizeWindow()" aria-label="Minimize" id="minimize"></button>
                     <button aria-label="Maximize" id="maximize"></button>
-                    <button @click="closeWindow()" aria-label="Close"></button>
+                    <button @click="closeWindow()" aria-label="Close" id="close"></button>
                   </div>
                 </div>
                   <div class="tab">
@@ -85,6 +85,7 @@ export default {
     },
     closeWindow(){
       this.showPortfolio = false
+      this.activeTab ='sobre'
     },
     minimizeWindow(){
       this.showPortfolio = false
