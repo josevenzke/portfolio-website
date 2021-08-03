@@ -1,10 +1,10 @@
 <template>
     <div class="navbar">
         <div class="botoes">
-            <button class="button-iniciar"><img src="../../public/images/start-button.png"></button>
-            <button v-if="show" @click="openPortfolio()">Portfolio</button>
+            <button id="button-iniciar"><img src="../../public/images/start-button.png"></button>
+            <button class="button-portfolio" v-if="showButton" :class="{ ativo: active }" @click="openPortfolio()"><img src="../../public/images/portfolio.png"> <span>Portfolio - José Venzke</span></button>
         </div>
-        <span class="right-content"><div class="icons"><img src="../../public/images/sound-icon.png"><img src="../../public/images/calendar-icon.png"></div>{{time}} <div class="clock"><img src="../../public/images/clock-icon.png"></div> </span>
+        <span class="right-content"><img src="../../public/images/sound-icon.png" id="sound-icon"><img src="../../public/images/calendar-icon.png" id="calendar-icon">{{time}} <div class="clock"><img src="../../public/images/clock-icon.png"></div> </span>
     </div>
 
 </template>
@@ -12,11 +12,12 @@
 <script>
 export default {
     name: 'Navbar',
-    props: ['showButton'],
+    props: ['showButton','activeButton'],
     data(){
         return{
             show: this.showButton,
-            time: 'as',
+            active: this.activeButton,
+            time: '',
         }
     },
     created(){
@@ -60,9 +61,13 @@ export default {
 
 .botoes{
     float: left;
+    display: flex;
 }
 
-.button-iniciar{
+button:focus{
+    outline:none;
+}
+#button-iniciar{
     width: 70px !important;
     height: 21px !important;
     margin-left: 3px !important;
@@ -70,6 +75,31 @@ export default {
     font-size: 12px;
     min-width: 0px !important;
     min-height: 0px !important;
+}
+
+.button-portfolio{
+    display: flex;
+    width: 220px !important;
+    height: 21px !important;
+    margin-left: 20px !important;
+    margin-top: 2px !important;
+    font-size: 12px;
+    min-width: 0px !important;
+    min-height: 0px !important;
+}
+
+.ativo{
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+}
+
+.button-portfolio>img{
+    height: 16px;
+    margin-top:2px
+}
+.button-portfolio>span{
+    margin-top:3px;
+    margin-left: 15px;
+    font-size: 14px;
 }
 
 .separador{
@@ -81,9 +111,8 @@ export default {
     padding: 2px 0 6px;
     border-top: 1px solid #000;
     height: 13px;
-    width: 130px;
+    width: 145px;
     margin: 1px 10px 0px 0px;
-    font-size: 12px;
     border-left: 1px solid #000;
     box-shadow: inset 1px 1px grey;
     float: right;
@@ -93,11 +122,16 @@ export default {
     border-right: 1px solid #fff;
     border-bottom: 1px solid #fff;
 }
-.icons{
-    margin:1px 16px 0px 8px;
+#calendar-icon{
+    margin:1px 12px 0px 4px;
+    height: 16px;
+}
+#sound-icon{
+    margin:1px 4px 0px 8px;
+    height:16px;
 }
 .clock{
-    margin:1px 8px 0px 4px;
+    margin:1px 8px 0px 8px;
 }
 
 </style>
