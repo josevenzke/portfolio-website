@@ -45,7 +45,7 @@
       <!-- Fim Principal -->
       </div>
       <div class="navbar">
-        <Navbar :showButton="showButton" :key="showButton" @clicked="maximizeWindow()" />
+        <Navbar :showButton="showButton" :activeButton="activeButton" :key="attButton" @clicked="maximizeWindow()" />
       </div>
 </div>
 </template>
@@ -67,8 +67,10 @@ export default {
   data(){
     return{
       activeTab:'sobre',
+      attButton:0,
       showPortfolio: true,
-      showButton: false,
+      showButton: true,
+      activeButton: true,
     }
   },
 
@@ -81,19 +83,28 @@ export default {
     },
     openWindow(){
       this.showPortfolio = true
-      this.showButton = false
+      this.showButton = true
+      this.activeButton = true
+      this.attButton +=1
     },
     closeWindow(){
       this.showPortfolio = false
+      this.showButton = false
+      this.activeButton = false
       this.activeTab ='sobre'
+      this.attButton +=1
     },
     minimizeWindow(){
       this.showPortfolio = false
       this.showButton = true
+      this.activeButton = false
+      this.attButton +=1
     },
     maximizeWindow(){
-      this.showPortfolio = true
-      this.showButton = false
+      this.showPortfolio = !this.showPortfolio
+      this.showButton = true
+      this.activeButton = !this.activeButton
+      this.attButton +=1
     },
     setActive(tab){
       this.activeTab = tab
@@ -121,6 +132,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  cursor: url('../public/images/cursor-padrao.png'), auto !important;
 }
 
 .title-bar, .window, button, input, label, option, select, textarea, ul.tree-view{
@@ -164,6 +176,9 @@ h6 {font-size: 16px;}
   top: 20px;
   left: 20px;
 }
+.icone:hover{
+  cursor: url('../public/images/cursor-clickable.png'), auto;
+}
 
 #desktop-icon-image{
   width: 50px;
@@ -181,7 +196,13 @@ h6 {font-size: 16px;}
   font-size: 14px;
   margin-left: 5px;
 }
+button:hover{
+  cursor: url('../public/images/cursor-clickable.png'), auto;
+}
 
+#maximize{
+  margin-left: 2px;
+}
 
 @media only screen and (max-width: 1250px) {
   .main-container{
