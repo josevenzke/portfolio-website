@@ -4,8 +4,8 @@
         <h5 class="name-title">Jose Venzke</h5>
         <p id="settings-note">Fullstack Software Developer</p>
         <div id="theme-options-wrapper">
-            <div class="ico"><i class="fab sub-icon fa-linkedin"></i></div>
-            <div class="ico"><i class="fab sub-icon fa-github-square"></i></div>
+            <div class="ico"><a href="https://www.linkedin.com/in/jos%C3%A9-venzke-66b046211/" target="_blank"><i class="fab sub-icon fa-linkedin"></i></a></div>
+            <div class="ico"><a href="https://github.com/josevenzke" target="_blank"><i class="fab sub-icon fa-github-square"></i></a></div>
         </div>
     </div>        
 </template>
@@ -32,10 +32,16 @@
 .ico{
   margin-right: 6px;
 }
-
+.ico:hover{
+  cursor: url('../../public/images/cursor-clickable.png'), auto;
+}
 .sub-icon{
   font-size: 35px;
 }
+.ico>a{
+  color: #2c3e50;
+}
+
 
 #theme-options-wrapper{
   display: flex;
