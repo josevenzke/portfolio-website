@@ -1,8 +1,9 @@
 <template>
 <div>
-  <div class="icone" @dblclick="openWindow()">
+  <div id="teste" class="icone" @click="modifyIcon()" @dblclick="openWindow()">
     <img src="../public/images/portfolio.png" id="desktop-icon-image">
-    <p id="desktop-icon-text">Portfolio</p>
+    <p id="desktop-icon-text" tabindex="0">Portfolio</p>
+
   </div>
   <div class="main-container">
         <!-- Principal -->
@@ -180,13 +181,21 @@ h6 {font-size: 16px;}
   cursor: url('../public/images/cursor-clickable.png'), auto;
 }
 
+#teste:hover #desktop-icon-text{
+  background-color: blue !important;
+}
+
+#desktop-icon-text:focus{
+  background-color: blue;
+}
+
 #desktop-icon-image{
   width: 50px;
   height: 50px;
   float: left;
 }
 #desktop-icon-text{
-  padding-top: 45px !important;
+  margin-top: 58px !important;
   color: white;
   font-family: "MS Sans Serif",Arial !important;
   font-size: 13px !important;
