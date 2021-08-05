@@ -1,9 +1,8 @@
 <template>
 <div>
-  <div id="teste" class="icone" @click="modifyIcon()" @dblclick="openWindow()">
+  <div tabindex="0" class="icone" @dblclick="openWindow()">
     <img src="../public/images/portfolio.png" id="desktop-icon-image">
     <p id="desktop-icon-text" tabindex="0">Portfolio</p>
-
   </div>
   <div class="main-container">
         <!-- Principal -->
@@ -69,9 +68,9 @@ export default {
     return{
       activeTab:'sobre',
       attButton:0,
-      showPortfolio: true,
-      showButton: true,
-      activeButton: true,
+      showPortfolio: false,
+      showButton: false,
+      activeButton: false,
     }
   },
 
@@ -174,20 +173,18 @@ h6 {font-size: 16px;}
 }
 .icone{
   position: absolute;
+  height: 80px;
   top: 20px;
   left: 20px;
+  padding: 5px 10px 0px 10px;
 }
 .icone:hover{
   cursor: url('../public/images/cursor-clickable.png'), auto;
 }
-
-#teste:hover #desktop-icon-text{
-  background-color: blue !important;
-}
-
-#desktop-icon-text:focus{
+.icone:focus{
   background-color: blue;
 }
+
 
 #desktop-icon-image{
   width: 50px;
