@@ -44,6 +44,7 @@
         </div>
       <!-- Fim Principal -->
       </div>
+      <TextHelper/>
       <div class="navbar">
         <Navbar :showButton="showButton" :activeButton="activeButton" :key="attButton" @clicked="maximizeWindow()" />
       </div>
@@ -55,6 +56,7 @@ import AboutTab from './components/AboutTab.vue'
 import Projetos from './components/Projetos.vue'
 import Contato from './components/Contato.vue'
 import Navbar from './components/Navbar.vue'
+import TextHelper from './components/TextHelper.vue'
 
 export default {
   name: 'App',
@@ -62,7 +64,8 @@ export default {
     AboutTab,
     Projetos,
     Contato,
-    Navbar
+    Navbar,
+    TextHelper
   },
   data(){
     return{
@@ -185,12 +188,12 @@ h6 {font-size: 16px;}
   background-color: blue;
 }
 
-
 #desktop-icon-image{
   width: 50px;
   height: 50px;
   float: left;
 }
+
 #desktop-icon-text{
   margin-top: 58px !important;
   color: white;
