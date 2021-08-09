@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div tabindex="0" class="icone" @dblclick="openWindow()">
+  <div tabindex="0" class="icone" @dblclick="openWindow(),updateRoute('/sobre')">
     <img src="../public/images/portfolio.png" id="desktop-icon-image">
     <p id="desktop-icon-text" tabindex="0">Portfolio</p>
   </div>
@@ -17,7 +17,7 @@
                   <div class="title-bar-controls">
                     <button @click="minimizeWindow()" aria-label="Minimize" id="minimize"></button>
                     <button aria-label="Maximize" id="maximize"></button>
-                    <button @click="closeWindow()" aria-label="Close" id="close"></button>
+                    <button @click="closeWindow(),updateRoute('/')" aria-label="Close" id="close"></button>
                   </div>
                 </div>
                   <div class="tab">
@@ -76,13 +76,21 @@ export default {
       activeButton: false,
     }
   },
-
+  created(){
+    this.openTabIfNeeded(window.location.pathname)
+  },
   methods:{
     isActive(tab){
       if (tab == this.activeTab){
         return true
       }
       return false
+    },
+    openTabIfNeeded(path){
+      if (path!='/'){
+        this.showPortfolio = true
+        this.activeTab = path.slice(1)
+      }
     },
     openWindow(){
       this.showPortfolio = true
@@ -183,9 +191,6 @@ h6 {font-size: 16px;}
 }
 .icone:hover{
   cursor: url('../public/images/cursor-clickable.png'), auto;
-}
-.icone:focus{
-  background-color: blue;
 }
 
 #desktop-icon-image{
