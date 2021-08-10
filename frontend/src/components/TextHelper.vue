@@ -5,7 +5,7 @@
         Você pode abrir o Portfolio<br />
         clicando no icone a esquerda
       </p>
-      <img src="../../public/images/teste.png" alt="" />
+      <img src="../../public/images/clippy.png" alt="" />
     </div>
   </transition>
 </template>
