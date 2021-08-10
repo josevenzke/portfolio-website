@@ -1,8 +1,11 @@
 <template>
 <div>
-  <div tabindex="0" class="icone" @dblclick="openWindow(),updateRoute('/sobre')">
+  <div class="icone" @dblclick="openWindow(),updateRoute('/sobre')">
     <img src="../public/images/portfolio.png" id="desktop-icon-image">
     <p id="desktop-icon-text" tabindex="0">Portfolio</p>
+  </div>
+  <div v-if="!mobile && showHelper" :key="mobile">
+    <TextHelper/>
   </div>
   <div class="main-container">
         <!-- Principal -->
@@ -14,7 +17,7 @@
               <div class="window" style="width: 100%">
                 <div class="title-bar">
                   <div class="title-bar-text"> Portfolio.exe</div>
-                  <div class="title-bar-controls">
+                  <div v-if="!mobile" class="title-bar-controls">
                     <button @click="minimizeWindow()" aria-label="Minimize" id="minimize"></button>
                     <button aria-label="Maximize" id="maximize"></button>
                     <button @click="closeWindow(),updateRoute('/')" aria-label="Close" id="close"></button>
@@ -44,7 +47,6 @@
         </div>
       <!-- Fim Principal -->
       </div>
-      <TextHelper/>
       <div class="navbar">
         <Navbar :showButton="showButton" :activeButton="activeButton" :key="attButton" @clicked="maximizeWindow()" />
       </div>
@@ -74,12 +76,27 @@ export default {
       showPortfolio: false,
       showButton: false,
       activeButton: false,
+      showHelper: true,
+      mobile: false,
     }
   },
   created(){
+    this.isMobile()
+    window.addEventListener("resize", this.isMobile)
     this.openTabIfNeeded(window.location.pathname)
   },
   methods:{
+    isMobile(){
+      if(window.innerWidth < 1050) {
+          console.log('menor')
+          this.mobile = true
+          this.showPortfolio = true
+      }else {
+          console.log('maior')
+          this.mobile = false
+          this.showHelper = false
+      }
+    },
     isActive(tab){
       if (tab == this.activeTab){
         return true
@@ -88,7 +105,9 @@ export default {
     },
     openTabIfNeeded(path){
       if (path!='/'){
+        console.log('a')
         this.showPortfolio = true
+        this.showHelper = false
         this.activeTab = path.slice(1)
       }
     },
@@ -96,6 +115,7 @@ export default {
       this.showPortfolio = true
       this.showButton = true
       this.activeButton = true
+      this.showHelper = false
       this.attButton +=1
     },
     closeWindow(){
@@ -122,8 +142,6 @@ export default {
     },
     updateRoute (route) {
       this.$router.push({ path: route })
-      console.log(this.$route)
-      
     }
   }
 
