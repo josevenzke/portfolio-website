@@ -20,7 +20,7 @@
         <div class="image-container">
             <img id="side-image" src="images/pc_pic.png" alt="">
         </div>
-    </div>
+    </div>              
 </template>
 
 <style scoped>
