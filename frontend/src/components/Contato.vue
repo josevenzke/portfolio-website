@@ -1,27 +1,69 @@
 <template>
     <div class="container-flex">
         <div class="contato-container">
-            <form class="contato-form" method="post">
+            <form class="contato-form" @submit.prevent="sendEmail">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome">
+                <input type="text" v-model="nome" name="name">
 
                 <label for="assunto">Assunto:</label>
-                <input type="text" name="assunto">
+                <input type="text" v-model="assunto" name="subject">
 
                 <label for="email">Email:</label>
-                <input type="email" name="email">
+                <input type="email" v-model="email" name="email">
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="text-input" name="mensagem"></textarea>
-            </form>
+                <textarea id="text-input" v-model="mensagem" name="message"></textarea>
 
-            <button id="button-email" type="submit" form="contact-form" value="Submit">Enviar</button>
+                <button id="button-email" type="submit">Enviar</button>
+            </form>       
         </div>
         <div class="image-container">
             <img id="side-image" src="images/pc_pic.png" alt="">
         </div>
     </div>              
 </template>
+
+<script>
+import emailjs from "emailjs-com";
+
+export default {
+    name:'Contato',
+    data(){
+        return{
+            nome: '',
+            assunto: '',
+            email: '',
+            mensagem:'',
+        }
+    },
+    methods:{
+        sendEmail(e){
+
+            try {
+                console.log(this.nome,this.email,this.mensagem)
+                emailjs.sendForm('service_p8k8o66', 'template_dymoewm', e.target, 'user_vwfDKiHRiSlppEsb2rCF2', {
+                name: this.nome,
+                email: this.email,
+                message: this.mensagem,
+                subject: this.assunto,
+                })
+                this.resetForm()
+
+            } catch (error) {
+                console.log({error})
+                }
+            },
+        resetForm(){
+            this.nome = ''
+            this.email = ''
+            this.mensagem = ''
+            this.assunto = ''
+        }
+  }
+}
+
+</script>
+
 
 <style scoped>
 .container-flex{
