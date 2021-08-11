@@ -4,7 +4,7 @@
     <img src="../public/images/portfolio.png" id="desktop-icon-image">
     <p id="desktop-icon-text" tabindex="0">Portfolio</p>
   </div>
-  <div v-if="!mobile && showHelper" :key="mobile">
+  <div v-if="!mobile && showHelper">
     <TextHelper/>
   </div>
   <div class="main-container">
@@ -82,11 +82,17 @@ export default {
   },
   created(){
     this.isMobile()
-    window.addEventListener("resize", this.isMobile)
+    window.addEventListener("resize", this.isResized)
     this.openTabIfNeeded(window.location.pathname)
   },
   methods:{
     isMobile(){
+      if(window.innerWidth < 1050) {
+          this.mobile = true
+          this.showPortfolio = true
+      }
+    },
+    isResized(){
       if(window.innerWidth < 1050) {
           console.log('menor')
           this.mobile = true
@@ -95,6 +101,10 @@ export default {
           console.log('maior')
           this.mobile = false
           this.showHelper = false
+          this.showButton = true
+          this.activeButton = true
+          this.attButton +=1
+          console.log(this.activeButton)
       }
     },
     isActive(tab){
@@ -105,8 +115,9 @@ export default {
     },
     openTabIfNeeded(path){
       if (path!='/'){
-        console.log('a')
         this.showPortfolio = true
+        this.showButton = true
+        this.activeButton = true
         this.showHelper = false
         this.activeTab = path.slice(1)
       }
