@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="images/logo.jpg" id="profile_pic" alt="My photo">
+        <img src="images/profile-pic.jpg" id="profile_pic" alt="My photo">
         <h5 class="name-title">Jose Venzke</h5>
         <p id="settings-note">Fullstack Software Developer</p>
         <div id="theme-options-wrapper">
@@ -33,7 +33,7 @@
   margin-right: 6px;
 }
 .ico:hover{
-  cursor: url('../../public/images/cursor-clickable.png'), auto;
+  cursor: url('../../../public/images/cursor/cursor-clickable.png'), auto;
 }
 .sub-icon{
   font-size: 35px;
