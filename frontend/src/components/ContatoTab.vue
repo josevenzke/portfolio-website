@@ -18,7 +18,7 @@
             </form>       
         </div>
         <div class="image-container">
-            <img id="side-image" src="images/pc_pic.png" alt="">
+            <img id="side-image" src="images/contato-pc.png" alt="">
         </div>
     </div>              
 </template>

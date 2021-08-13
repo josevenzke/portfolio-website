@@ -8,7 +8,7 @@
                 </div>
             </div>
         <div class="window-body">
-            <img src="../assets/sortvisualizer.gif" class="projeto-imagem">
+            <img src="images/gifs/sortvisualizer.gif" class="projeto-imagem">
             <p>Projeto feito para a visualização de algoritmos de ordenação, implementa bubblesort, mergesort e quicksort, usando conceitos de design patterns e a biblioteca Tkinter </p>
             <div class="projeto-botoes">
                 <a href="https://github.com/josevenzke/sort-visualizer" target="_blank"><button id="github">Github</button></a>
@@ -24,7 +24,7 @@
                 </div>
             </div>
         <div class="window-body">
-            <img src="../assets/chess.gif" class="projeto-imagem">
+            <img src="images/gifs/chess.gif" class="projeto-imagem">
             <p>Engine e jogo de xadrez, capaz de fazer movimentos, inclusive de casos especiais, calcular posições e salvar historico, feito usando pygame em multi-trheading </p>
             <div class="projeto-botoes">
                 <a href="https://github.com/josevenzke/chess-engine" target="_blank"><button id="github">Github</button></a>
@@ -40,7 +40,7 @@
                 </div>
             </div>
         <div class="window-body">
-            <img src="../assets/Blog.gif" class="projeto-imagem">
+            <img src="images/gifs/Blog.gif" class="projeto-imagem">
             <p>Blog feito inteiramente com Django, com capacidade de login/registo, criação,edição e exclusão de Posts, comentários e pesquisas com filtros, totalmente responsivo</p>
             <div class="projeto-botoes">
                 <a href="https://github.com/josevenzke/blog-project" target="_blank"><button id="github">Github</button></a>
