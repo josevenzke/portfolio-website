@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Profile from './Profile.vue'
-import About from './About.vue'
+import Profile from './AboutComponents/Profile.vue'
+import About from './AboutComponents/About.vue'
 
 export default {
     name:'AboutTab',

@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="icone" @dblclick="openWindow(),updateRoute('/sobre')">
-    <img src="../public/images/portfolio.png" id="desktop-icon-image">
+    <img src="../public/images/portfolio-icon.png" id="desktop-icon-image">
     <p id="desktop-icon-text" tabindex="0">Portfolio</p>
   </div>
   <div v-if="!mobile && showHelper">
@@ -34,10 +34,10 @@
                     <AboutTab />
                   </div>
                   <div v-show="isActive('projetos')">
-                    <Projetos />
+                    <ProjetosTab />
                   </div>
                   <div v-show="isActive('contato')">
-                    <Contato />
+                    <ContatoTab />
                   </div>
                 </div>
               </div>
@@ -55,17 +55,17 @@
 
 <script>
 import AboutTab from './components/AboutTab.vue'
-import Projetos from './components/Projetos.vue'
-import Contato from './components/Contato.vue'
-import Navbar from './components/Navbar.vue'
-import TextHelper from './components/TextHelper.vue'
+import ProjetosTab from './components/ProjetosTab.vue'
+import ContatoTab from './components/ContatoTab.vue'
+import Navbar from './components/GeneralComponents/Navbar.vue'
+import TextHelper from './components/GeneralComponents/TextHelper.vue'
 
 export default {
   name: 'App',
   components: { 
     AboutTab,
-    Projetos,
-    Contato,
+    ProjetosTab,
+    ContatoTab,
     Navbar,
     TextHelper
   },
@@ -172,7 +172,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  cursor: url('../public/images/cursor-padrao.png'), auto !important;
+  cursor: url('../public/images/cursor/cursor-padrao.png'), auto !important;
 }
 
 .title-bar, .window, button, input, label, option, select, textarea, ul.tree-view{
@@ -219,7 +219,7 @@ h6 {font-size: 16px;}
   padding: 5px 10px 0px 10px;
 }
 .icone:hover{
-  cursor: url('../public/images/cursor-clickable.png'), auto;
+  cursor: url('../public/images/cursor/cursor-clickable.png'), auto;
 }
 
 #desktop-icon-image{
@@ -240,7 +240,7 @@ h6 {font-size: 16px;}
   margin-left: 5px;
 }
 button:hover{
-  cursor: url('../public/images/cursor-clickable.png'), auto;
+  cursor: url('../public/images/cursor/cursor-clickable.png'), auto;
 }
 
 #maximize{
