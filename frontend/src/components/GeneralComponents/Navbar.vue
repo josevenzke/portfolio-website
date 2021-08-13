@@ -1,10 +1,10 @@
 <template>
     <div class="navbar">
         <div class="botoes">
-            <button id="button-iniciar"><img src="../../public/images/start-button.png"></button>
-            <button class="button-portfolio" v-if="showButton" :class="{ ativo: active }" @click="openPortfolio()"><img src="../../public/images/portfolio.png"> <span>Portfolio - José Venzke</span></button>
+            <button id="button-iniciar"><img src="images/navbar/start-button.png"></button>
+            <button class="button-portfolio" v-if="showButton" :class="{ ativo: active }" @click="openPortfolio()"><img src="images/navbar/portfolio.png"> <span>Portfolio - José Venzke</span></button>
         </div>
-        <span class="right-content"><img src="../../public/images/sound-icon.png" id="sound-icon"><img src="../../public/images/calendar-icon.png" id="calendar-icon">{{time}} <div class="clock"><img src="../../public/images/clock-icon.png"></div> </span>
+        <span class="right-content"><img src="images/navbar/sound-icon.png" id="sound-icon"><img src="images/navbar/calendar-icon.png" id="calendar-icon">{{time}} <div class="clock"><img src="images/navbar/clock-icon.png"></div> </span>
     </div>
 
 </template>
