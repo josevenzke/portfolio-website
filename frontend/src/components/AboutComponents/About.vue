@@ -9,6 +9,7 @@
     <div class="window-body">
       <p>Sou um desenvolvedor de software de 22 anos, atualmente cursando o ultimo semestre do curso de Ciência da Computação, apaixonado por novas tecnologias, auto-didata e com sede de conhecimento. </p>
       <Skills />
+      <a href="files/CV - José Venzke.pdf" download=""><button class="curriculo-download">Curriculo <i class="fas fa-download"></i></button></a>
     </div>
   </div>
 
@@ -32,5 +33,8 @@ export default {
   letter-spacing: -0.5px;
   font-size: 16px;
 }
-
+.curriculo-download{
+  width: 170px;
+  font-size: 14px;
+}
 </style>
