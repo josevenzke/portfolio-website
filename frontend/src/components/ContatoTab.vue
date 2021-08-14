@@ -1,7 +1,7 @@
 <template>
     <div class="container-flex">
         <div class="contato-container">
-            <form class="contato-form" @submit.prevent="sendEmail">
+            <form v-if="showForm" class="contato-form" @submit.prevent="sendEmail">
                 <label for="nome">Nome:</label>
                 <input type="text" v-model="nome" name="name">
 
@@ -15,7 +15,15 @@
                 <textarea id="text-input" v-model="mensagem" name="message"></textarea>
 
                 <button id="button-email" type="submit">Enviar</button>
-            </form>       
+            </form>
+            <div class="loader-container" v-else>
+                <div class="container">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
+            </div>       
         </div>
         <div class="image-container">
             <img id="side-image" src="images/contato-pc.png" alt="">
@@ -34,21 +42,24 @@ export default {
             assunto: '',
             email: '',
             mensagem:'',
+            showForm:true,
         }
     },
     methods:{
-        sendEmail(e){
+        async sendEmail(e){
 
             try {
-                console.log(this.nome,this.email,this.mensagem)
+                this.showForm = false
                 emailjs.sendForm('service_p8k8o66', 'template_dymoewm', e.target, 'user_vwfDKiHRiSlppEsb2rCF2', {
                 name: this.nome,
                 email: this.email,
                 message: this.mensagem,
                 subject: this.assunto,
                 })
+                console.log(this.showForm)
                 this.resetForm()
-
+                await this.sleep(3000)
+                this.showForm = true
             } catch (error) {
                 console.log({error})
                 }
@@ -58,7 +69,10 @@ export default {
             this.email = ''
             this.mensagem = ''
             this.assunto = ''
-        }
+        },
+        sleep(ms){
+            return new Promise(resolve => setTimeout(resolve, ms));
+        },
   }
 }
 
@@ -66,6 +80,8 @@ export default {
 
 
 <style scoped>
+@import '/css/loader.css';
+
 .container-flex{
     display: flex;
 }
@@ -109,6 +125,11 @@ export default {
     margin-top: 30px 10px 30px 10px;
     background-position: no-repeat;
 }
+
+.loader-container{
+    height: 200px;
+}
+
 
 @media only screen and (max-width: 1050px) {
     .image-container{
