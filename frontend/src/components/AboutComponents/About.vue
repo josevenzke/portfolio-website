@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="window-body">
-      <p>Sou um desenvolvedor de software de 22 anos, atualmente cursando o ultimo semestre do curso de Ciência da Computação, apaixonado por novas tecnologias, auto-didata e com sede de conhecimento. </p>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed voluptatibus optio quidem mollitia amet omnis! Velit aperiam itaque culpa tempora sequi error ipsum illum mollitia cupiditate labore, eum aspernatur. </p>
       <Skills />
       <a href="files/CV - José Venzke.pdf" download=""><button class="curriculo-download">Curriculo <i class="fas fa-download"></i></button></a>
     </div>
