@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="icone" @dblclick="openWindow(),updateRoute('/sobre')">
+  <div class="icone" @dblclick="openWindow()">
     <img src="../public/images/portfolio-icon.png" id="desktop-icon-image">
     <p id="desktop-icon-text" tabindex="0">Portfolio</p>
   </div>
@@ -20,13 +20,13 @@
                   <div v-if="!mobile" class="title-bar-controls">
                     <button @click="minimizeWindow()" aria-label="Minimize" id="minimize"></button>
                     <button aria-label="Maximize" id="maximize"></button>
-                    <button @click="closeWindow(),updateRoute('/')" aria-label="Close" id="close"></button>
+                    <button @click="closeWindow()" aria-label="Close" id="close"></button>
                   </div>
                 </div>
                   <div class="tab">
-                    <button @click="setActive('sobre'),updateRoute('/sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
-                    <button @click="setActive('projetos'),updateRoute('/projetos')" :class="{ active: isActive('projetos')}">Projetos</button>
-                    <button @click="setActive('contato'),updateRoute('/contato')" :class="{ active: isActive('contato')}">Contato</button>
+                    <button @click="setActive('sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
+                    <button @click="setActive('projetos')" :class="{ active: isActive('projetos')}">Projetos</button>
+                    <button @click="setActive('contato')" :class="{ active: isActive('contato')}">Contato</button>
                     <div class="last"></div>
                   </div>
                 <div class="window sub-window">
@@ -83,7 +83,6 @@ export default {
   created(){
     this.isMobile()
     window.addEventListener("resize", this.isResized)
-    this.openTabIfNeeded(window.location.pathname)
   },
   methods:{
     isMobile(){
@@ -112,15 +111,6 @@ export default {
         return true
       }
       return false
-    },
-    openTabIfNeeded(path){
-      if (path!='/'){
-        this.showPortfolio = true
-        this.showButton = true
-        this.activeButton = true
-        this.showHelper = false
-        this.activeTab = path.slice(1)
-      }
     },
     openWindow(){
       this.showPortfolio = true
