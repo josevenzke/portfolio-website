@@ -3,13 +3,15 @@
     <div>
         <ul class="tree-view">
             <li>
-                Conhecimentos:
+                Programming:
                 <ul>
                 <li>Python</li>
                 <li>JavaScript</li>
-                <li>C</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>VueJS</li>
+                <li>Django</li>
                 <li>HTML/CSS</li>
-                <li>Docker</li>
                 </ul>
             </li>
         </ul>
@@ -17,13 +19,18 @@
     <div>
         <ul class="tree-view">
             <li>
-                Outras Habilidades:
+                Outros:
                 <ul>
-                <li>Django</li>
-                <li>Vue JS</li>
-                <li>Django RestFramework</li>
-                <li>Selenium</li>
                 <li>Linux</li>
+                <li>Docker</li>
+                <li>Web Scrapping</li>
+                </ul>
+            </li>
+            <li>
+                Idiomas:
+                <ul>
+                <li>Portugues</li>
+                <li>Ingles</li>
                 </ul>
             </li>
         </ul>
