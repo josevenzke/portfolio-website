@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="window-body">
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed voluptatibus optio quidem mollitia amet omnis! Velit aperiam itaque culpa tempora sequi error ipsum illum mollitia cupiditate labore, eum aspernatur. </p>
+      <p> Desenvolvedor Web Fullstack, experencia com a linguagem de negocios e com o ciclo completo de desenvolvimento, de API's até ao web design. Apaixonado por algoritmos, estruturas de dados e projetos open source. Sempre a procura de novos desafios, tem alguma idea? entre em contato! </p>
       <Skills />
       <a href="files/CV - José Venzke.pdf" download=""><button class="curriculo-download">Curriculo <i class="fas fa-download"></i></button></a>
     </div>
