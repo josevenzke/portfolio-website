@@ -2,7 +2,10 @@
     <div>
         <img src="images/profile-pic.jpg" id="profile_pic" alt="My photo">
         <h5 class="name-title">Jose Venzke</h5>
-        <p id="settings-note">Fullstack Software Developer</p>
+        <div id="settings-note">
+          <p>josevenzkejr@gmail.com</p>
+          <p>Porto Alegre, RS</p>
+        </div>
         <div id="theme-options-wrapper">
             <div class="ico"><a href="https://www.linkedin.com/in/jos%C3%A9-venzke-66b046211/" target="_blank"><i class="fab sub-icon fa-linkedin"></i></a></div>
             <div class="ico"><a href="https://github.com/josevenzke" target="_blank"><i class="fab sub-icon fa-github-square"></i></a></div>
@@ -46,9 +49,14 @@
 #theme-options-wrapper{
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 
 #settings-note{
-    font-size: 14px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+#settings-note>p{
+  margin: 5px;
 }
 </style>
