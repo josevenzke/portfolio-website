@@ -24,9 +24,9 @@
                   </div>
                 </div>
                   <div class="tab">
-                    <button @click="setActive('sobre')" :class="{ active: isActive('sobre')}">Sobre</button>
-                    <button @click="setActive('projetos')" :class="{ active: isActive('projetos')}">Projetos</button>
-                    <button @click="setActive('contato')" :class="{ active: isActive('contato')}">Contato</button>
+                    <button @click="setActive('sobre')" :class="{ active: isActive('sobre')}">{{ $t('tabs.sobre') }}</button>
+                    <button @click="setActive('projetos')" :class="{ active: isActive('projetos')}">{{ $t('tabs.projetos') }}</button>
+                    <button @click="setActive('contato')" :class="{ active: isActive('contato')}">{{ $t('tabs.contato') }}</button>
                     <div class="last"></div>
                   </div>
                 <div class="window sub-window">
@@ -60,6 +60,7 @@ import ContatoTab from './components/ContatoTab.vue'
 import Navbar from './components/GeneralComponents/Navbar.vue'
 import TextHelper from './components/GeneralComponents/TextHelper.vue'
 
+
 export default {
   name: 'App',
   components: { 
@@ -67,7 +68,7 @@ export default {
     ProjetosTab,
     ContatoTab,
     Navbar,
-    TextHelper
+    TextHelper,
   },
   data(){
     return{
@@ -141,9 +142,6 @@ export default {
     setActive(tab){
       this.activeTab = tab
     },
-    updateRoute (route) {
-      this.$router.push({ path: route })
-    }
   }
 
 }
