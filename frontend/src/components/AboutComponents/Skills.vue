@@ -3,7 +3,7 @@
     <div>
         <ul class="tree-view">
             <li>
-                Programming:
+                {{ $t('aboutTab.skills.programming') }}
                 <ul>
                 <li>Python</li>
                 <li>JavaScript</li>
@@ -19,7 +19,7 @@
     <div>
         <ul class="tree-view">
             <li>
-                Outros:
+                {{ $t('aboutTab.skills.others') }}
                 <ul>
                 <li>Linux</li>
                 <li>Docker</li>
@@ -27,10 +27,10 @@
                 </ul>
             </li>
             <li>
-                Idiomas:
+                {{ $t('aboutTab.skills.languages') }}
                 <ul>
-                <li>Portugues</li>
-                <li>Ingles</li>
+                <li> {{ $t('aboutTab.skills.portuguese') }}</li>
+                <li> {{ $t('aboutTab.skills.english') }}</li>
                 </ul>
             </li>
         </ul>

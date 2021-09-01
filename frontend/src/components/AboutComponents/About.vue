@@ -7,9 +7,9 @@
       </div>
     </div>
     <div class="window-body">
-      <p> Desenvolvedor Web Fullstack, experencia com a linguagem de negocios e com o ciclo completo de desenvolvimento, de API's até ao web design. Apaixonado por algoritmos, estruturas de dados e projetos open source. Sempre a procura de novos desafios, tem alguma idea? entre em contato! </p>
+      <p>{{ $t('aboutTab.description') }}</p>
       <Skills />
-      <a href="files/CV - José Venzke.pdf" download=""><button class="curriculo-download">Curriculo <i class="fas fa-download"></i></button></a>
+      <a href="files/CV - José Venzke.pdf" download=""><button class="curriculo-download">{{ $t('aboutTab.resume') }} <i class="fas fa-download"></i></button></a>
     </div>
   </div>
 
