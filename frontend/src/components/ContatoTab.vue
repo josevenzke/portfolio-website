@@ -2,19 +2,19 @@
     <div class="container-flex">
         <div class="contato-container">
             <form v-if="showForm" class="contato-form" @submit.prevent="sendEmail">
-                <label for="nome">Nome:</label>
+                <label for="nome">{{$t('contactTab.name')}}:</label>
                 <input type="text" v-model="nome" name="name">
 
-                <label for="assunto">Assunto:</label>
+                <label for="assunto">{{$t('contactTab.subject')}}:</label>
                 <input type="text" v-model="assunto" name="subject">
 
                 <label for="email">Email:</label>
                 <input type="email" v-model="email" name="email">
 
-                <label for="mensagem">Mensagem:</label>
+                <label for="mensagem">{{$t('contactTab.message')}}:</label>
                 <textarea id="text-input" v-model="mensagem" name="message"></textarea>
 
-                <button id="button-email" type="submit">Enviar</button>
+                <button id="button-email" type="submit">{{$t('contactTab.send')}}</button>
             </form>
             <div class="loader-container" v-else>
                 <div class="container">
