@@ -1,3 +1,31 @@
 {
-  "message": "hello i18n !!"
+  "texthelper": "You can open the portfolio by clicking on the left icon",
+  "tabs":{
+    "sobre": "About",
+    "projetos": "Projects",
+    "contato": "Contact"
+  },
+  "aboutTab":{
+    "description":"Fullstack Web Developer, experience with business language and the full development cycle, from APIs to web design. Passionate about algorithms, data structures and open source projects. Always looking for challenges. Got any ideas? Contact me!",
+    "skills":{
+      "programming": "Programming",
+      "others": "Others",
+      "languages": "Languages",
+      "portuguese": "Portuguese",
+      "english": "English"
+    },
+    "resume": "Resume"
+  },
+  "projectTab":{
+    "sortingDesc":"Visualizer for sorting algorithms, implements bubblesort, mergesort, selectiond sort and quicksort(with recursion), made with VueJS and vanilla CSS.",
+    "chessDesc": "Chess game and Engine, capable of making moves (including special ones), calculate positions and keep a game history, made with pygame using multi-trheading.",
+    "blogDesc":"Blog with login/sign-in capacities, create/edit/delete functionalities, commentaries and filter search, fully responsive, made with Django and Bootstrap."
+  },
+  "contactTab":{
+    "name": "Name",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send"
+  }
 }
+

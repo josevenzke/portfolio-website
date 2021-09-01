@@ -1,3 +1,31 @@
 {
-    "message": "Olá i18n !!"
+  "texthelper": "Você pode abrir o Portfolio clicando no icone a esquerda",
+  "tabs":{
+    "sobre": "Sobre",
+    "projetos": "Projetos",
+    "contato": "Contato"
+  },
+  "aboutTab":{
+    "description":"Desenvolvedor Web Fullstack, experencia com a linguagem de negocios e com o ciclo completo de desenvolvimento, de API's até ao web design. Apaixonado por algoritmos, estruturas de dados e projetos open source. Sempre a procura de novos desafios, tem alguma ideia? entre em contato!",
+    "skills":{
+      "programming": "Programação",
+      "others": "Outros",
+      "languages": "Idiomas",
+      "portuguese": "Portugues",
+      "english": "Ingles"
+    },
+    "resume": "Curriculo"
+  },
+  "projectTab":{
+    "sortingDesc":"Projeto feito para a visualização de algoritmos de ordenação, implementa bubblesort, mergesort e quicksort, usando conceitos de design patterns e a biblioteca Tkinter.",
+    "chessDesc":"Engine e jogo de xadrez, capaz de fazer movimentos, inclusive de casos especiais, calcular posições e salvar historico, feito usando pygame em multi-trheading.",
+    "blogDesc": "Blog feito inteiramente com Django, com capacidade de login/registo, criação,edição e exclusão de Posts, comentários e pesquisas com filtros, totalmente responsivo."
+  },
+  "contactTab":{
+    "name": "Nome",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "send": "Enviar"
   }
+  
+}
