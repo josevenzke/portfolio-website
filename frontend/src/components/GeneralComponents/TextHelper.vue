@@ -2,8 +2,7 @@
   <transition name="fade">
     <div v-if="showText" class="clippy">
       <p class="clippy-text">
-        Você pode abrir o Portfolio<br />
-        clicando no icone a esquerda
+        {{ $t('texthelper') }}
       </p>
       <img src="images/clippy.png" alt="" />
     </div>
@@ -46,7 +45,7 @@ export default {
 .clippy-text {
   position: absolute;
   top: 3px;
-  left: 25px;
+  left: 5px;
 }
 
 .fade-enter-active,
