@@ -1,12 +1,12 @@
 {
-  "texthelper": "Você pode abrir o Portfolio clicando no icone a esquerda",
+  "texthelper": "Você pode abrir o Portfolio clicando duas vezes no icone a esquerda",
   "tabs":{
     "sobre": "Sobre",
     "projetos": "Projetos",
     "contato": "Contato"
   },
   "aboutTab":{
-    "description":"Desenvolvedor Web Fullstack, experencia com a linguagem de negocios e com o ciclo completo de desenvolvimento, de API's até ao web design. Apaixonado por algoritmos, estruturas de dados e projetos open source. Sempre a procura de novos desafios, tem alguma ideia? entre em contato!",
+    "description":"Desenvolvedor Web Fullstack, experiencia com a linguagem de negocios e com o ciclo completo de desenvolvimento, de API's até ao web design. Apaixonado por algoritmos, estruturas de dados e projetos open source. Sempre a procura de novos desafios, tem alguma ideia? entre em contato!",
     "skills":{
       "programming": "Programação",
       "others": "Outros",
