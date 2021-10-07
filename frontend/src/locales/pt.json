@@ -14,7 +14,8 @@
       "portuguese": "Portugues",
       "english": "Ingles"
     },
-    "resume": "Curriculo"
+    "resume": "Curriculo",
+    "resume-url": "files/CV-José Venzke-ptBR.pdf"
   },
   "projectTab":{
     "sortingDesc":"Projeto feito para a visualização de algoritmos de ordenação, implementa bubblesort, mergesort e quicksort, usando conceitos de design patterns e a biblioteca Tkinter.",

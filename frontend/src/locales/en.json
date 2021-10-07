@@ -14,7 +14,8 @@
       "portuguese": "Portuguese",
       "english": "English"
     },
-    "resume": "Resume"
+    "resume": "Resume",
+    "resume-url": "files/Resume-José Venzke-en.pdf"
   },
   "projectTab":{
     "sortingDesc":"Visualizer for sorting algorithms, implements bubblesort, mergesort, selectiond sort and quicksort(with recursion), made with VueJS and vanilla CSS.",
