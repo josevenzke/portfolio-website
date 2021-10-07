@@ -9,7 +9,7 @@
     <div class="window-body">
       <p>{{ $t('aboutTab.description') }}</p>
       <Skills />
-      <a href="files/CV - José Venzke.pdf" download=""><button class="curriculo-download">{{ $t('aboutTab.resume') }} <i class="fas fa-download"></i></button></a>
+      <a :href="$t('aboutTab.resume-url')" download=""><button class="curriculo-download">{{ $t('aboutTab.resume') }} <i class="fas fa-download"></i></button></a>
     </div>
   </div>
 
