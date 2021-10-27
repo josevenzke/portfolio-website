@@ -24,8 +24,6 @@ export default {
     async textHelp() {
         await this.sleep(500)
         this.showText = true
-        await this.sleep(4000)
-        this.showText = false
         },
     sleep(ms){
         return new Promise(resolve => setTimeout(resolve, ms));
