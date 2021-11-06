@@ -60,7 +60,7 @@ export default {
     margin-bottom: 30px;
   }
   .right-column{
-    width: 360px;
+    width: 230px;
     margin: auto;
     margin-bottom: 20px;
   }

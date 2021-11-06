@@ -139,4 +139,16 @@ export default {
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 570px) {
+    .contato-container{
+        width: 300px;
+    }
+    .contato-form{
+        width:220px;
+    }
+    #button-email{
+        width: 220px !important;
+    }
+}
 </style>

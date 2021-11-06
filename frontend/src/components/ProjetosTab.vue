@@ -109,8 +109,10 @@ div>p{
 
 @media only screen and (max-width: 700px) {
   .teste{
-
       width: 85% !important;
+  }
+  .projeto-imagem{
+      width: 200px;
   }
 }
 
