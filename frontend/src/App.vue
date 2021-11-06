@@ -60,7 +60,6 @@ import ContatoTab from './components/ContatoTab.vue'
 import Navbar from './components/GeneralComponents/Navbar.vue'
 import TextHelper from './components/GeneralComponents/TextHelper.vue'
 
-
 export default {
   name: 'App',
   components: { 
@@ -94,17 +93,16 @@ export default {
     },
     isResized(){
       if(window.innerWidth < 1050) {
-          console.log('menor')
           this.mobile = true
           this.showPortfolio = true
       }else {
-          console.log('maior')
           this.mobile = false
-          this.showHelper = false
-          this.showButton = true
-          this.activeButton = true
+          this.showHelper = true
+          this.showButton = false
+          this.activeButton = false
+          this.showPortfolio = false
           this.attButton +=1
-          console.log(this.activeButton)
+
       }
     },
     isActive(tab){
@@ -276,7 +274,7 @@ button:hover{
 @media only screen and (max-width: 580px) {
   .main-container{
     margin-top: 50px  auto 0px auto;
-    width: 450px;
+    width: 300px;
 
   }
 }
